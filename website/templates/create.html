@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Create a Note{% endblock title %}
+{% block body %}
+<br>
+<br>
+<form method='post'>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="title" class="form-control" id="title" required name="title" placeholder="Note title">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <textarea class="form-control" required placeholder="Note Description" id="desc" name="desc" rows=5></textarea>
+      </div>
+      <a href="/create"><button type="submit" class="btn btn-primary">Add Note</button></a>
+</form>
+{% endblock body %}

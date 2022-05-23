@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="container my-5">
+    {% for value, item in data.items() %}
+        <p>{{value}}: {{item}}</p>
+    {% endfor %}
+</div>
+{% endblock body %}

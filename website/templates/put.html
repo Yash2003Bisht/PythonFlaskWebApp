@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Update a Note{% endblock title %}
+{% block body %}
+    <div class="container my-5">
+        <form method='post' action='/put/{{note.id}}'>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="title" class="form-control" value="{{note.title}}" id="title" required name="title" placeholder="Note title">
+              </div>
+              <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <input type="text" class="form-control" required placeholder="Note Description" id="desc" name="desc" value="{{note.description}}"></input>
+              </div>
+              <button type="submit" class="btn btn-primary">Update Note</button>
+        </form>
+    </div>
+{% endblock body %}

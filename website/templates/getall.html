@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}All Notes{% endblock title %}
+{% block body %}
+<br>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Created Date</th>
+          <th scope="col">Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user_data in range(user.notes | length) %}
+        <tr>
+            <th scope="row">{{user_data + 1}}</th>
+            <td>{{user.notes[user_data].title}}</td>
+            <td>{{user.notes[user_data].description}}</td>
+            <td>{{user.notes[user_data].date}}</td>
+            <td>
+                <a href="/delete/{{user.notes[user_data].id}}"><button class="btn btn-primary btn-l">Delete</button></a>
+                <a href="/put/{{user.notes[user_data].id}}"><button class="btn btn-primary btn-l">Update</button></a>
+            
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  {% endblock body %}

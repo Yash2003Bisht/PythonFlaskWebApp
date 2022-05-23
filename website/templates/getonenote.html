@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}Get One Notes{% endblock title %}
+{% block body %}
+<br>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Created Date</th>
+          <th scope="col">Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>{{note.title}}</td>
+        <td>{{note.description}}</td>
+        <td>{{note.date}}</td>
+        <td>
+            <a href="/delete/{{note.id}}"><button class="btn btn-primary btn-l">Delete</button></a>
+            <a href="/put/{{note.id}}"><button class="btn btn-primary btn-l">Update</button></a>
+        
+        </td>
+        </tr>
+      </tbody>
+  </table>
+  {% endblock body %}
