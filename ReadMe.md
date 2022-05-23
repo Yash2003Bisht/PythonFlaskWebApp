@@ -2,7 +2,7 @@
 
 ## Api requests
 
-### /get/<int:id>
+### /get/<int: id>
 
 Go to search bar and type note id only admin can see all notes in database
 
@@ -18,7 +18,7 @@ Update single note, admin can update any note
 
 Create new note
 
-### /delete/<int:id>
+### /delete/<int: id>
 
 Delete a note, admin can delete any note
 
@@ -56,7 +56,7 @@ Go to /create and create a note
 
 #### deleting a note
 
-Go to /delete/<int:id>
+Go to /delete/<int: id>
 
 
 #### updating a note
